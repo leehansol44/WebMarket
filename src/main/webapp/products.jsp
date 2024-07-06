@@ -36,6 +36,7 @@
 				<h3><%=product.getPname() %></h3>
 				<p><%=product.getDescription() %>
 				<p><%=product.getUnitPrice() %>
+				<p><a href="./product.jsp?id=<%=product.getProductId()%>" class="btn btn-secondary" role="button">상세 정보 &raquo;> </a>
 			</div>
 			<%
 			//위에 반복문 시작을 닫도록 스크립틀릿 태그를 작성한다. 

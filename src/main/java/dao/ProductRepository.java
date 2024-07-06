@@ -47,4 +47,26 @@ public class ProductRepository{
 	public ArrayList<Product> getAllProducts(){
 		return listOfProducts;
 	}
+	
+	
+	//상품 데이터 접근 클래스 만들기  (내장객체)
+	
+	
+	
+	//상품 상세정보를 가져오는 메소드 만들기.
+	//객체 변수 listOfProducts에 저장된 모든 상품 목록에서 상품 아이디와 일치하는 상품을 가져오는 getProductById()메소드를 작성한다. 
+	public Product getProductById(String productId) {
+		Product productById = null;
+		
+		for(int i =0; i <listOfProducts.size(); i++) {
+			Product product = listOfProducts.get(i);
+			if(product != null && product.getProductId() != null && product.getProductId().equals(productId)) {
+				productById = product;
+				break;
+			}
+		}
+		return productById;
+	
+	}
+	
 }
